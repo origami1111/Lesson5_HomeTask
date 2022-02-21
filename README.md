@@ -4,6 +4,7 @@ Create a console application.
 Implement reading from files with extensions:
 - .txt;
 - .csv;
+
 Add an option to select input file extension from the Console.
 Reading from file should be implemented using System.IO.
 File should contain ONLY integers. As input values you have 2 numbers separated by space (' ') for .txt and by comma (',') for .csv formats.
@@ -24,6 +25,7 @@ x, y, x+y, x*y, x/y
 output result should be the same for both file types - .txt and .csv
 in case if y=0, log an error into the file
 extension of output file should be an opposite from the input, like, if you read from .txt file, the result should be saved into .csv and vice versa.
+
 File naming should be like this: 
 - output_DateTime.Now().(.txt/.csv);
 
