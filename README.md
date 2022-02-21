@@ -3,7 +3,7 @@
 Create a console application.
 Implement reading from files with extensions:
 - .txt;
-- .csv;
+- .csv;  
 Add an option to select input file extension from the Console.
 Reading from file should be implemented using System.IO.
 File should contain ONLY integers. As input values you have 2 numbers separated by space (' ') for .txt and by comma (',') for .csv formats.
