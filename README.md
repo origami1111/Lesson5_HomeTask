@@ -1,4 +1,4 @@
-# Lesson5_HomeTask
+# Streams and File System
 
 Create a console application.
 Implement reading from files with extensions:
