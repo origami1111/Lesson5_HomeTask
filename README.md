@@ -28,11 +28,11 @@ File naming should be like this:
 - output_DateTime.Now().(.txt/.csv);
 
 .csv input file example:
-2, 13
-23, 6
-16, 41
+2, 13  
+23, 6  
+16, 41  
 
 .txt input file example:
-2 13
-23 6
-16 41
+2 13  
+23 6  
+16 41  
