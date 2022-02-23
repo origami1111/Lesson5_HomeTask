@@ -20,9 +20,9 @@ Optional task: dividing by 0 can be handled by try/catch construction.
 Results of calculation should be saved in a NEW file.
 Writing to the file should be implemented using FileStream class
 
-Example of output:
+Example of output:  
 x, y, x+y, x*y, x/y
-output result should be the same for both file types - .txt and .csv
+output result should be the same for both file types - .txt and .csv  
 in case if y=0, log an error into the file
 extension of output file should be an opposite from the input, like, if you read from .txt file, the result should be saved into .csv and vice versa.
 
