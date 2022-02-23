@@ -2,7 +2,7 @@
 {
     public static class FileExtensions
     {
-        public const string csvExtension = ".csv";
-        public const string txtExtension = ".txt";
+        public const string CsvExtension = ".csv";
+        public const string TxtExtension = ".txt";
     }
 }

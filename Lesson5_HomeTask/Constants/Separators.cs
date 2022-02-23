@@ -2,7 +2,7 @@
 {
     public static class Separators
     {
-        public const string commaSep = ",";
-        public const string whiteSpaceSep = " ";
+        public const string CommaSep = ",";
+        public const string WhiteSpaceSep = " ";
     }
 }

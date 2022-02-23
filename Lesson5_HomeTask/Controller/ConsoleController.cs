@@ -19,21 +19,21 @@ namespace Lesson5_HomeTask
         private static void ChooseInputFile()
         {
             Console.WriteLine("Select input file extension:");
-            Console.WriteLine($"1 - {FileExtensions.txtExtension}");
-            Console.WriteLine($"2 - {FileExtensions.csvExtension}");
+            Console.WriteLine($"1 - {FileExtensions.TxtExtension}");
+            Console.WriteLine($"2 - {FileExtensions.CsvExtension}");
             Console.Write("> ");
 
             string choise = Console.ReadLine();
 
             if (choise == "1")
             {
-                fileExtension = FileExtensions.txtExtension;
-                separator = Separators.whiteSpaceSep;
+                fileExtension = FileExtensions.TxtExtension;
+                separator = Separators.WhiteSpaceSep;
             }
             else if (choise == "2")
             {
-                fileExtension = FileExtensions.csvExtension;
-                separator = Separators.commaSep;
+                fileExtension = FileExtensions.CsvExtension;
+                separator = Separators.CommaSep;
             }
             else
             {

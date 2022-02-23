@@ -17,14 +17,14 @@ namespace Lesson5_HomeTask
         {
             this.fileExtension = fileExtension;
             this.separator = separator;
-            textFile = $@"{Folders.dataFiles}\{Folders.text}{fileExtension}";
+            textFile = $@"{Folders.DataFiles}\{Folders.Text}{fileExtension}";
         }
 
         public void WriteResults()
         {
-            string oppositeExtension = fileExtension == FileExtensions.csvExtension ?
-                                                        FileExtensions.txtExtension : FileExtensions.csvExtension;
-            string newFile = $@"{Folders.output}_{DateTime.Now.ToShortDateString()}{oppositeExtension}";
+            string oppositeExtension = fileExtension == FileExtensions.CsvExtension ?
+                                                        FileExtensions.TxtExtension : FileExtensions.CsvExtension;
+            string newFile = $@"{Folders.Output}_{DateTime.Now.ToString("MM.dd.yyyy")}{oppositeExtension}";
             FileStream fs = File.Create(newFile);
 
             using (StreamWriter sr = new StreamWriter(fs))
@@ -32,12 +32,12 @@ namespace Lesson5_HomeTask
                 for (int i = 0; i < firstNumber.Count; i++)
                 {
                     sr.Write($"{firstNumber[i]}, {secondNumber[i]}, ");
-                    sr.Write($"{firstNumber[i]}+{secondNumber[i]}={Sum(firstNumber[i], secondNumber[i])}, ");
-                    sr.Write($"{firstNumber[i]}*{secondNumber[i]}={Multiply(firstNumber[i], secondNumber[i])}, ");
+                    sr.Write($"{firstNumber[i]}+{secondNumber[i]}={Calculation.GetSum(firstNumber[i], secondNumber[i])}, ");
+                    sr.Write($"{firstNumber[i]}*{secondNumber[i]}={Calculation.GetMultiply(firstNumber[i], secondNumber[i])}, ");
 
                     try
                     {
-                        sr.Write($"{firstNumber[i]}/{secondNumber[i]}={Divide(firstNumber[i], secondNumber[i])}");
+                        sr.Write($"{firstNumber[i]}/{secondNumber[i]}={Calculation.GetDivide(firstNumber[i], secondNumber[i])}");
                     }
                     catch (DivideByZeroException ex)
                     {
@@ -64,25 +64,5 @@ namespace Lesson5_HomeTask
             }
         }
 
-        private int Sum(int firstNumber, int secondNumber)
-        {
-            return firstNumber + secondNumber;
-        }
-
-        private int Multiply(int firstNumber, int secondNumber)
-        {
-            return firstNumber * secondNumber;
-        }
-
-        private int Divide(int firstNumber, int secondNumber)
-        {
-            if (secondNumber == 0)
-            {
-                Console.WriteLine($"Error: the second number can not be {secondNumber}");
-                throw new DivideByZeroException("Can not divide by zero");
-            }
-
-            return firstNumber / secondNumber;
-        }
     }
 }

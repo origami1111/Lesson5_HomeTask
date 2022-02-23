@@ -2,8 +2,8 @@
 {
     public static class Folders
     {
-        public const string dataFiles = "DataFiles";
-        public const string text = "text";
-        public const string output = "output";
+        public const string DataFiles = "DataFiles";
+        public const string Text = "text";
+        public const string Output = "output";
     }
 }
